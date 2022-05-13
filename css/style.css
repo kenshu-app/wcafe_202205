@@ -29,6 +29,16 @@ ul {
   list-style-type: none;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+}
+
 th {
   vertical-align: top;
   text-align: left;
