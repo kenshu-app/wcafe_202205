@@ -82,6 +82,12 @@ input[type="checkbox"] {
   margin: 0 10px 0 30px;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*-------------------------
   グローバル
 -------------------------*/
@@ -128,8 +134,37 @@ input[type="checkbox"] {
 
 .top-welcome {
   height: 640px;
+  margin-bottom: 30px;
   background: url("../images/main.jpg") center top / cover no-repeat;
   box-shadow: inset 0 2px 5px #000;
+}
+
+.top-main {
+  width: 660px;
+  float: left;
+}
+
+.top-side {
+  width: 300px;
+  float: right;
+}
+
+.top-time,
+.top-rank {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc;
+  padding: 20px 30px 20px 400px;
+  margin-bottom: 30px;
+  height: 300px;
+}
+
+.top-time {
+  background: url("../images/time.jpg") -290px top no-repeat;
+}
+
+.top-rank {
+  background: url("../images/rank.jpg") -290px top no-repeat;
 }
 
 .top-time li,
