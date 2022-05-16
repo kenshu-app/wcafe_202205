@@ -41,6 +41,7 @@ em {
 
 ol,
 ul {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -53,14 +54,32 @@ tr:nth-of-type(odd) {
   background-color: #fbfbfb;
 }
 
-th,
-td {
-  border: 1px solid #ccc;
-}
-
 th {
   vertical-align: top;
   text-align: left;
+}
+
+th,
+td {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+select,
+textarea {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+input[type="radio"], 
+input[type="checkbox"] {
+  margin: 0 10px 0 30px;
 }
 
 /*-------------------------
@@ -116,6 +135,7 @@ th {
 .top-rank a[href$="#other"]::after {
   font-family: FontAwesome;
   content: "\f18e";
+  margin-left: 5px;
 }
 
 .top-rank a[href$="#other"] {
@@ -134,6 +154,19 @@ th {
 
 .top-side a:hover {
   opacity: .7;
+}
+
+/*-------------------------
+  セカンド
+-------------------------*/
+
+.menus > h2,
+.info > h2,
+.movie > h2,
+.map > h2,
+.contact > h2 {
+  margin: 50px 0 20px;
+  border-bottom: 1px dotted #422;
 }
 
 /*-------------------------
