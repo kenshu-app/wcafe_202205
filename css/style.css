@@ -30,6 +30,10 @@ a:visited {
   color: #333;
 }
 
+:hover {
+  transition: .4s ease;
+}
+
 a:hover,
 a:active {
   color: #933;
@@ -77,7 +81,7 @@ textarea {
 }
 
 
-input[type="radio"], 
+input[type="radio"],
 input[type="checkbox"] {
   margin: 0 10px 0 30px;
 }
@@ -86,6 +90,38 @@ input[type="checkbox"] {
   content: "";
   display: block;
   clear: both;
+}
+
+.jBounceIn {
+  transition: .6s cubic-bezier(.47, 2.02, .31, -0.36);
+}
+
+.jBounceIn:hover,
+.jbounceIn:focus,
+.jbounceIn:active {
+  transform: scale(1.1);
+}
+
+.jBounceUp:hover {
+  animation: jBounceUp-frames 1s;
+}
+
+@keyframes jBounceUp-frames {
+
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
 }
 
 /*-------------------------
@@ -100,14 +136,12 @@ input[type="checkbox"] {
 .gl-header {
   height: 140px;
   padding-top: 15px;
-  background: 
-  linear-gradient(
-    110deg,
-    #000 0%,
-    rgba(27,18,18, .7) 70%,
-    rgba(27,18,18, .8) 100%
-  ),
-  url("../images/wood.jpg") 0 0 / contain repeat-x;
+  background:
+    linear-gradient(110deg,
+      #000 0%,
+      rgba(27, 18, 18, .7) 70%,
+      rgba(27, 18, 18, .8) 100%),
+    url("../images/wood.jpg") 0 0 / contain repeat-x;
   background-blend-mode: hard-light;
 }
 
@@ -268,7 +302,8 @@ input[type="checkbox"] {
   font-weight: bold;
   background-color: #900;
   border-radius: 3px;
-  padding: 3px; /* 内側の余白 */
+  padding: 3px;
+  /* 内側の余白 */
 }
 
 .top-side a:hover {
@@ -279,11 +314,11 @@ input[type="checkbox"] {
   セカンド
 -------------------------*/
 
-.menus > h2,
-.info > h2,
-.movie > h2,
-.map > h2,
-.contact > h2 {
+.menus>h2,
+.info>h2,
+.movie>h2,
+.map>h2,
+.contact>h2 {
   margin: 50px 0 20px;
   border-bottom: 1px dotted #422;
 }
@@ -292,13 +327,13 @@ input[type="checkbox"] {
   メニュー
 -------------------------*/
 
-.menus > ul {
+.menus>ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2px;
 }
 
-.menus > ul li a {
+.menus>ul li a {
   padding: 10px;
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -338,15 +373,19 @@ input[type="checkbox"] {
 .menu:nth-of-type(1)::after {
   background-image: url("../images/m_morning.jpg");
 }
+
 .menu:nth-of-type(2)::after {
   background-image: url("../images/m_lunch.jpg");
 }
+
 .menu:nth-of-type(3)::after {
   background-image: url("../images/m_dessert.jpg");
 }
+
 .menu:nth-of-type(4)::after {
   background-image: url("../images/m_other.jpg");
 }
+
 .menu:nth-of-type(5)::after {
   background-image: url("../images/m_drink.jpg");
 }
