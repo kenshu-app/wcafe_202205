@@ -174,6 +174,19 @@ input[type="checkbox"] {
   float: left;
 }
 
+.top-order {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-time {
+  order: 2;
+}
+
+.top-rank {
+  order: 1;
+}
+
 .top-side {
   width: 300px;
   float: right;
@@ -212,6 +225,20 @@ input[type="checkbox"] {
   letter-spacing: 0;
 }
 
+.top-news dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-news dt {
+  width: 18%;
+}
+
+.top-news dd {
+  width: 82%;
+  border-bottom: 1px dotted #ccc;
+}
+
 .top-news dd:first-of-type::after {
   content: "NEW!";
   color: white;
@@ -242,6 +269,20 @@ input[type="checkbox"] {
 /*-------------------------
   メニュー
 -------------------------*/
+
+.menus > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.menus > ul li a {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+}
 
 .menu h3::first-line {
   font-size: 2.4rem;
